@@ -19,6 +19,9 @@ class Finding(BaseModel):
     workflow_status: str = ''
     record_state: str = ''
     severity_label: str = ''
+    resource_type: str = ''
+    resource_id: str = ''
+    resource_details: str = ''
 
 def fetch_findings(environment: str, filterstr: str, sortcriteria: str) -> List[Finding]:
     '''
@@ -46,6 +49,9 @@ def fetch_findings(environment: str, filterstr: str, sortcriteria: str) -> List[
         finding.workflow_status = f["Workflow"]["Status"]
         finding.record_state = f["RecordState"]
         finding.severity_label = f["FindingProviderFields"]["Severity"]["Label"]
+        finding.resource_type = str(f["Resources"][0]["Type"])
+        finding.resource_id = str(f["Resources"][0]["Id"])
+        finding.resource_details = str(f["Resources"][0]["Details"] if ("Details" in f["Resources"][0].keys()) else '')
 
         findings.append(finding)
 
