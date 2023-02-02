@@ -4,16 +4,6 @@ Small script (copy of https://github.com/dominikjaeckle/aws-fetch-security-hub-f
 
 Modified to support a csv output.
 
-Two versions of the script are included
-
-- example 
-  - version that extracts everythign based on the settings.yaml, extracts less fields
-- example_extra_detail_by_SeverityLabel 
-  - improved script that extracts data in two passes, for a specific severity label
-  - removed extra qutating in the findings that breaks csv
-  - extracts extra ECR related repo data if present
-  - includes the source product - helpful to see where findings came from
-
 ## Prerequisites
 If you have not done so, set up the local AWS profiles (config + crendentials file) following the instructions here: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html 
 

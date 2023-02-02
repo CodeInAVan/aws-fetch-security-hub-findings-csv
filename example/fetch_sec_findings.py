@@ -111,7 +111,11 @@ def create_valid_html(findings: List[Finding]):
         csv += f'{index},'
         for key, value in finding:
             html += f'<td>{value}</td>'
-            csv += f'"{value.replace(","," ")}",'
+            newvalue = value.replace(","," ")
+            newvalue = newvalue.replace('"',' ')
+            newvalue = newvalue.replace('\n',' ')
+            newvalue = newvalue.replace('\r',' ')
+            csv += f'"{newvalue}",'
         html += '</tr>'
         csv += f'\n'
         index += 1
