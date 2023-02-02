@@ -13,6 +13,7 @@ Two versions of the script are included
   - removed extra qutating in the findings that breaks csv
   - extracts extra ECR related repo data if present
   - includes the source product - helpful to see where findings came from
+  - sorting commented out to improve speed
 
 ## Prerequisites
 If you have not done so, set up the local AWS profiles (config + crendentials file) following the instructions here: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html 

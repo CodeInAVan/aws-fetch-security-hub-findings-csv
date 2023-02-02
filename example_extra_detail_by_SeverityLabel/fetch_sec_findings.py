@@ -38,9 +38,6 @@ def fetch_findings(environment: str, filterstr: str, sortcriteria: str) -> List[
 
     #findings_raw = os.popen(f'aws securityhub get-findings --filters {filterstr} --sort-criteria {sortcriteria} --page-size 100 --max-items 100000')
     findings_raw = os.popen(f'aws securityhub get-findings --filters {filterstr} --page-size 100 --max-items 100000')
-
-#   aws securityhub get-findings --filters '{"WorkflowStatus": [{"Value": "NEW", "Comparison": "EQUALS"}],"RecordState": [{"Value": "ACTIVE", "Comparison": "EQUALS"}],"SeverityLabel": [{"Value": "CRITICAL", "Comparison": "EQUALS"}]}'
-
     findings_json = json.loads(findings_raw.read())['Findings']
 
     findings: List[Finding] = []
