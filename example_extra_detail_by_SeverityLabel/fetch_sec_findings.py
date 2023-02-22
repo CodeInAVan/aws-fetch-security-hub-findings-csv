@@ -15,6 +15,7 @@ class Finding(BaseModel):
     title: str = ''
     productname: str = ''
     controlid: str = ''
+    baseimage: str = ''
     description: str = ''
     recommendation_text: str = ''
     recommendation_url: str = ''
@@ -53,6 +54,7 @@ def fetch_findings(environment: str, filterstr: str, sortcriteria: str) -> List[
         finding.description = f["Description"]
         finding.productname = f["ProductName"]
         finding.controlid = f["ProductFields"]["ControlId"] if ("ProductFields" in f.keys() and "ControlId" in f["ProductFields"].keys()) else ''
+        finding.baseimage = f["ProductFields"]["aws/inspector/resources/1/resourceDetails/awsEcrContainerImageDetails/platform"] if ("ProductFields" in f.keys() and "aws/inspector/resources/1/resourceDetails/awsEcrContainerImageDetails/platform" in f["ProductFields"].keys()) else ''
         finding.recommendation_text = f["Remediation"]["Recommendation"]["Text"] if ("Remediation" in f.keys()) else ''
         finding.recommendation_url = f["Remediation"]["Recommendation"]["Url"] if ("Remediation" in f.keys() and "Url" in f["Remediation"]["Recommendation"].keys()) else ''
         finding.workflow_state = f["WorkflowState"]
