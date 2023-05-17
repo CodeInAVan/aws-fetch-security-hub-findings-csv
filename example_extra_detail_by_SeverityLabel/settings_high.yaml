@@ -16,8 +16,12 @@ filters:
     value: ACTIVE
     comparison: EQUALS
 
-  - filter_name: SeverityLabel
-    value: HIGH
+  - filter_name: ProductName
+    value: Config
+    comparison: EQUALS
+
+  - filter_name: AwsAccountId
+    value: "11111111111"
     comparison: EQUALS
 
 # sorting of the return list

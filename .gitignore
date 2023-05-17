@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 
 *security_findings*
+example_multiple_account/Organization_accounts_information.csv
+*results*

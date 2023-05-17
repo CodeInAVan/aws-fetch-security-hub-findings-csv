@@ -17,15 +17,15 @@ filters:
     comparison: EQUALS
 
   - filter_name: ProductName
-    value: Config
+    value: Security Hub
     comparison: EQUALS
 
-  - filter_name: ProductName
-    value: Config
+  - filter_name: ComplianceStatus
+    value: FAILED
     comparison: EQUALS
 
   - filter_name: AwsAccountId
-    value: "11111111111"
+    value: "111111111111"
     comparison: EQUALS
 
 # sorting of the return list

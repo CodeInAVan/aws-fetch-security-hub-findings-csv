@@ -1,0 +1,3 @@
+﻿111111111111,arn:aws:organizations::1234567890:account/o-kadxqa7zwq/111111111111,aaaaaaa@email.com,ACCOUNT_NAME,ACTIVE,CREATED,Thu Nov 04 2021 17:44:18 GMT+0000 (Greenwich Mean Time)
+011111111111,arn:aws:organizations::1234567890:account/o-kadxqa7zwq/011111111111,bbbbbbbbbbb@email.com,ACCOUNT_NAME,ACTIVE,CREATED,Thu Nov 04 2021 17:44:18 GMT+0000 (Greenwich Mean Time)
+001111111111,arn:aws:organizations::1234567890:account/o-kadxqa7zwq/001111111111,cccccccccccccc@email.com,ACCOUNT_NAME,ACTIVE,CREATED,Thu Nov 04 2021 17:44:18 GMT+0000 (Greenwich Mean Time)
