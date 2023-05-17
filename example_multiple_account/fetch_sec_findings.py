@@ -39,7 +39,7 @@ def fetch_findings(environment: str, filterstr: str, sortcriteria: str, accountN
 
     os.environ['AWS_PROFILE'] = environment
 
-    print(f'aws securityhub get-findings --filters {filterstr} --page-size 100 --max-items 9999999 --region {region}')
+    #print(f'aws securityhub get-findings --filters {filterstr} --page-size 100 --max-items 9999999 --region {region}')
 
     findings_raw = os.popen(f'aws securityhub get-findings --filters {filterstr} --page-size 100 --max-items 9999999 --region {region}')
     findings_json = json.loads(findings_raw.read())['Findings']
